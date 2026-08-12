@@ -28,8 +28,10 @@ Built for an operation spanning **9 stores and approximately 130 staff members**
 
 **Links**
 
-- Repository: [add repository URL]
-- Demo: [add demo URL]
+- Repository: https://github.com/konkonrong-lgtm/shift-management-system-portfolio
+- Staff Demo: https://demo-shift.vercel.app/s/demo
+- Manager Demo: https://demo-shift.vercel.app/manager/demo/login  
+  Password: `1111`
 
 ---
 
