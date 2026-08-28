@@ -65,6 +65,40 @@ My external **PR #7973** was adopted by Salesforce as internal **PR #7976** for 
 
 ---
 
+## Developer Tools
+
+### mf-check — Salesforce Multi-Framework Preflight CLI
+
+A CLI for catching configuration and GraphQL compatibility issues in Salesforce Multi-Framework projects before deployment.
+
+Currently focused on React-based Salesforce Multi-Framework applications.
+
+**What it checks**
+- UI Bundle configuration and build output
+- CustomApplication → UI Bundle linkage
+- Lightning application configuration
+- Permission Set application visibility
+- GraphQL operations against the target Salesforce org schema
+
+Published as an npm package with automated tests and GitHub Actions CI.
+
+**Tech Stack**
+
+`TypeScript` `GraphQL` `Salesforce CLI` `Vitest` `GitHub Actions`
+
+**Install**
+
+```bash
+npm install -g @konkonrong/mf-check
+```
+
+**Links**
+
+- Repository: https://github.com/konkonrong-lgtm/mf-check
+- npm: https://www.npmjs.com/package/@konkonrong/mf-check
+
+---
+
 ## Currently Building
 
 ### Restaurant Cost & Recipe Management System
