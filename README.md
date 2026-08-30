@@ -38,19 +38,17 @@ Built for an operation spanning **9 stores and approximately 130 staff members**
 - Repository: https://github.com/konkonrong-lgtm/shift-management-system-portfolio
 - Staff Demo: https://demo-shift.vercel.app/s/demo
 - Manager Demo: https://demo-shift.vercel.app/manager/demo/login  
-  Password: `1111`
+  Password: `## Security Research
 
 ---
 
-## Security Research
+### Salesforce Security Report
 
-### Salesforce — Cross-Org Metadata Operation Integrity
+Reported a security issue to Salesforce Product Security.
 
-Independently identified and responsibly disclosed a cross-org metadata operation integrity issue in Salesforce Extensions for VS Code.
+Salesforce confirmed that the reported findings were successfully reproduced and that the Engineering team was working on remediation.
 
-Traced the issue to mutable target-org state across a single metadata operation lifecycle, reproduced the failure conditions, analyzed the affected execution and source-tracking paths, and developed a scoped remediation with regression tests.
-
-Salesforce Product Security confirmed that the reported findings were successfully reproduced and that the Engineering team was working on remediation.
+Technical details are being withheld pending confirmation that they can be publicly disclosed.
 
 ---
 
