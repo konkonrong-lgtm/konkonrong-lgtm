@@ -38,9 +38,11 @@ Built for an operation spanning **9 stores and approximately 130 staff members**
 - Repository: https://github.com/konkonrong-lgtm/shift-management-system-portfolio
 - Staff Demo: https://demo-shift.vercel.app/s/demo
 - Manager Demo: https://demo-shift.vercel.app/manager/demo/login  
-  Password: `## Security Research
+  Password: `1111`
 
 ---
+
+## Security Research
 
 ### Salesforce Security Report
 
