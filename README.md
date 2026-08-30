@@ -26,12 +26,23 @@ Built for an operation spanning **9 stores and approximately 130 staff members**
 
 `Next.js` `TypeScript` `Supabase` `PostgreSQL` `Vercel`
 
+---
+
 **Links**
 
 - Repository: https://github.com/konkonrong-lgtm/shift-management-system-portfolio
 - Staff Demo: https://demo-shift.vercel.app/s/demo
 - Manager Demo: https://demo-shift.vercel.app/manager/demo/login  
   Password: `1111`
+## Security Research
+
+### Salesforce — Cross-Org Metadata Operation Integrity
+
+Independently identified and responsibly disclosed a cross-org metadata operation integrity issue in Salesforce Extensions for VS Code.
+
+Traced the issue to mutable target-org state across a single metadata operation lifecycle, reproduced the failure conditions, analyzed the affected execution and source-tracking paths, and developed a scoped remediation with regression tests.
+
+Salesforce Product Security confirmed that the reported findings were successfully reproduced and that the Engineering team was working on remediation.
 
 ---
 
@@ -69,9 +80,9 @@ My external **PR #7973** was adopted by Salesforce as internal **PR #7976** for 
 
 ### mf-check — Salesforce Multi-Framework Preflight CLI
 
-A CLI for catching configuration and GraphQL compatibility issues in Salesforce Multi-Framework projects before deployment.
+A CLI for detecting configuration, linkage, and GraphQL compatibility issues in Salesforce Multi-Framework projects before deployment.
 
-Currently focused on React-based Salesforce Multi-Framework applications.
+Designed to catch deployment blockers and environment mismatches early, with a current focus on React-based Salesforce Multi-Framework applications.
 
 **What it checks**
 - UI Bundle configuration and build output
