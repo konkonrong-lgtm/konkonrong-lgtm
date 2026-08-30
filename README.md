@@ -34,6 +34,9 @@ Built for an operation spanning **9 stores and approximately 130 staff members**
 - Staff Demo: https://demo-shift.vercel.app/s/demo
 - Manager Demo: https://demo-shift.vercel.app/manager/demo/login  
   Password: `1111`
+
+---
+
 ## Security Research
 
 ### Salesforce — Cross-Org Metadata Operation Integrity
