@@ -1,8 +1,13 @@
 # Hi, I'm Sunghun
 
-Engineering student in Japan interested in software engineering, product development, and developer tools.
+Engineering student in Japan focused on software engineering, developer tools, and Salesforce.
 
-I enjoy identifying real operational problems, building solutions, and improving them through actual user feedback.
+## Highlights
+
+- Contributor to Salesforce's `salesforcedx-vscode`
+- Creator of `mf-check`, an open-source diagnostic CLI for Salesforce Multi-Framework projects
+- Reported a security issue that Salesforce Security reproduced
+- Built a production shift management system used across 9 stores / ~130 staff
 
 ## Featured Project
 
