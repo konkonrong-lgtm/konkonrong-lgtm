@@ -94,7 +94,7 @@ Designed to catch deployment blockers and environment mismatches early, with a c
 
 **What it checks**
 - UI Bundle configuration and build output
-- CustomApplication → UI Bundle linkage
+- CustomApplication / Experience Cloud → UI Bundle linkage
 - Lightning application configuration
 - Permission Set application visibility
 - GraphQL operations against the target Salesforce org schema
