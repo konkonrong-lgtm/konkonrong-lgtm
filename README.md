@@ -22,6 +22,15 @@
 
 ### Salesforce公式OSS — salesforcedx-vscode
 
+Apex Language Serverの不要な起動やorg切り替え時の状態競合を調査し、修正・回帰テストの提出と問題報告に取り組みました。
+
+- **コード貢献・マージ済み：** [PR #7976](https://github.com/forcedotcom/salesforcedx-vscode/pull/7976)
+- **修正案採用・未マージ：** [PR #8005](https://github.com/forcedotcom/salesforcedx-vscode/pull/8005)
+- **問題報告・防御強化の対応確認：** [PR #8079](https://github.com/forcedotcom/salesforcedx-vscode/pull/8079)（Informational／実装はSalesforce側）
+
+<details>
+<summary>調査・修正・報告の詳細を見る</summary>
+
 **コード貢献：Apex Language Serverの不要な起動を防止 — マージ済み**
 
 Salesforce以外のプロジェクトで `.cls` ファイルを開くと、Apex Language Serverが起動し、不要なファイルが生成される問題を調査しました。プロジェクト判定と回帰テストを追加した [PR #7973](https://github.com/forcedotcom/salesforcedx-vscode/pull/7973) は、Salesforce側のCI・レビュー用の [PR #7976](https://github.com/forcedotcom/salesforcedx-vscode/pull/7976) に採用され、作者情報を保持したままマージされました。
@@ -33,6 +42,8 @@ org切り替え後に、以前のorgの非同期処理が現在のorg情報を�
 **問題の調査・報告：操作中のtarget org変更への防御強化**
 
 操作中にtarget orgが変わる問題を調査・再現し、Salesforceに報告しました。ベンダーから再現確認と、関連する [PR #8079](https://github.com/forcedotcom/salesforcedx-vscode/pull/8079) が報告した状況に対応する旨の回答を受けています。最終分類はInformationalで、対応はdefense-in-depth（多層防御）です。修正コードはSalesforce側が実装しました。
+
+</details>
 
 ### mf-check — Salesforce Multi-Framework事前検証CLI
 
