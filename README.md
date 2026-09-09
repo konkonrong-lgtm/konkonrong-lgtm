@@ -5,7 +5,7 @@
 実際の業務で使われるWebアプリと、開発者向けツールを作っています。利用者の声をもとにした改善や、既存のコードを読んで原因を調べ、修正・テストまで進めることに取り組んでいます。
 
 - **業務アプリ開発：** 飲食店向けシフト管理システムを開発し、実運用のフィードバックをもとに継続改善
-- **公式OSSへの貢献：** SalesforceのVS Code拡張に不具合修正と回帰テストを提出し、採用・マージ
+- **公式OSSへの貢献：** SalesforceのVS Code拡張で、不具合の調査・報告と回帰テスト付き修正に取り組み、コードの採用・マージを経験
 - **開発者向けツール：** Salesforce Multi-Frameworkの事前検証CLI「mf-check」を開発し、npmで公開
 
 ## 主なプロジェクト・貢献
@@ -22,11 +22,17 @@
 
 ### Salesforce公式OSS — salesforcedx-vscode
 
-Salesforce以外のプロジェクトで `.cls` ファイルを開くと、Apex Language Serverが起動し、不要なファイルが生成される問題を調査しました。
+**コード貢献：Apex Language Serverの不要な起動を防止 — マージ済み**
 
-原因を追跡し、Salesforceプロジェクトかどうかを確認する処理と回帰テストを追加。提出した **PR #7973** は、Salesforce側のCI・レビュー用の **PR #7976** に取り込まれ、作者情報を保持したままマージされました。
+Salesforce以外のプロジェクトで `.cls` ファイルを開くと、Apex Language Serverが起動し、不要なファイルが生成される問題を調査しました。プロジェクト判定と回帰テストを追加した [PR #7973](https://github.com/forcedotcom/salesforcedx-vscode/pull/7973) は、Salesforce側のCI・レビュー用の [PR #7976](https://github.com/forcedotcom/salesforcedx-vscode/pull/7976) に採用され、作者情報を保持したままマージされました。
 
-[提出したPR #7973](https://github.com/forcedotcom/salesforcedx-vscode/pull/7973) · [採用・マージされたPR #7976](https://github.com/forcedotcom/salesforcedx-vscode/pull/7976)
+**コード貢献：org切り替え時の非同期更新の競合を修正 — 採用・未マージ**
+
+org切り替え後に、以前のorgの非同期処理が現在のorg情報を上書きする問題を再現し、修正と処理の完了順序を制御した回帰テストを提出しました。[PR #8004](https://github.com/forcedotcom/salesforcedx-vscode/pull/8004) は、作者クレジットを保持してSalesforce側の [PR #8005](https://github.com/forcedotcom/salesforcedx-vscode/pull/8005) に採用されています（2026年9月10日時点でOpen・未マージ）。
+
+**問題の調査・報告：操作中のtarget org変更への防御強化**
+
+操作中にtarget orgが変わる問題を調査・再現し、Salesforceに報告しました。ベンダーから再現確認と、関連する [PR #8079](https://github.com/forcedotcom/salesforcedx-vscode/pull/8079) が報告した状況に対応する旨の回答を受けています。最終分類はInformationalで、対応はdefense-in-depth（多層防御）です。修正コードはSalesforce側が実装しました。
 
 ### mf-check — Salesforce Multi-Framework事前検証CLI
 
@@ -41,7 +47,6 @@ npmで公開し、自動テストとCIで継続的に検証しています。
 
 ## その他の取り組み
 
-- **セキュリティ報告：** Salesforce Product Securityに問題を報告し、再現できたとの連絡を受けています。技術的な詳細は公開可否が確認できるまで非公開にしています。
 - **開発中：** 飲食店向けの食材・レシピ・原価管理システム。
 
 ## 使用技術
@@ -68,8 +73,11 @@ Next.js / TypeScript / Supabase / PostgreSQL / Vercel
 
 [Portfolio and design documents](https://github.com/konkonrong-lgtm/shift-management-system-portfolio) · [Staff demo](https://demo-shift.vercel.app/s/demo) · [Manager demo](https://demo-shift.vercel.app/manager/demo/login) (demo password: `1111`)
 
-**Salesforce OSS — salesforcedx-vscode**  
-Investigated unintended Apex Language Server startup outside Salesforce projects, added a project guard, and wrote regression tests. My [PR #7973](https://github.com/forcedotcom/salesforcedx-vscode/pull/7973) was adopted into [PR #7976](https://github.com/forcedotcom/salesforcedx-vscode/pull/7976) and merged with author credit preserved.
+**Salesforce OSS — salesforcedx-vscode**
+
+- **Code contribution — merged:** Investigated unintended Apex Language Server startup outside Salesforce projects, added a project guard, and wrote regression tests. My [PR #7973](https://github.com/forcedotcom/salesforcedx-vscode/pull/7973) was adopted into [PR #7976](https://github.com/forcedotcom/salesforcedx-vscode/pull/7976) and merged with author credit preserved.
+- **Code contribution — adopted, not yet merged:** Reproduced a race where an older org's asynchronous identity enrichment overwrites the newly selected org, and submitted a fix with a deterministic regression test. My [PR #8004](https://github.com/forcedotcom/salesforcedx-vscode/pull/8004) was adopted into Salesforce's [PR #8005](https://github.com/forcedotcom/salesforcedx-vscode/pull/8005) with author credit preserved (open and unmerged as of September 10, 2026).
+- **Issue investigation and reporting:** Reported a target-org change scenario during an operation. Salesforce confirmed reproduction and confirmed that [PR #8079](https://github.com/forcedotcom/salesforcedx-vscode/pull/8079) addresses the reported scenario. The final classification was Informational, with the change treated as defense-in-depth. Salesforce implemented the fix.
 
 **mf-check — Multi-Framework preflight CLI**  
 Created an npm-published CLI to check UI Bundle linkage, local access metadata, and GraphQL compatibility with a target Salesforce org. Supports external `.graphql` files and static inline Salesforce SDK `gql`, with a focus on reducing false positives.
@@ -80,7 +88,6 @@ TypeScript / Babel AST / GraphQL / Vitest / GitHub Actions
 
 ### Other work
 
-- Reported a security issue that Salesforce Product Security confirmed it could reproduce. Technical details remain private pending disclosure clearance.
 - Currently building a restaurant ingredient, recipe, and cost management system.
 
 </details>
