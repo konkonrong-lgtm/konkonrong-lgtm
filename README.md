@@ -1,159 +1,86 @@
-# Hi, I'm Sunghun
+# キム・ソンフン / Sunghun Kim
 
-Engineering student in Japan focused on software engineering, developer tools, and Salesforce.
+**関西学院大学 工学部｜2028年卒業予定｜ソフトウェアエンジニア志望**
 
-## Highlights
+実際の業務で使われるWebアプリと、開発者向けツールを作っています。利用者の声をもとにした改善や、既存のコードを読んで原因を調べ、修正・テストまで進めることに取り組んでいます。
 
-- Contributor to Salesforce's `salesforcedx-vscode`
-- Creator of `mf-check`, an open-source diagnostic CLI for Salesforce Multi-Framework projects
-- Reported a security issue that Salesforce Security reproduced
-- Built a production shift management system used across 9 stores / ~130 staff
+- **業務アプリ開発：** 飲食店向けシフト管理システムを開発し、実運用のフィードバックをもとに継続改善
+- **公式OSSへの貢献：** SalesforceのVS Code拡張に不具合修正と回帰テストを提出し、採用・マージ
+- **開発者向けツール：** Salesforce Multi-Frameworkの事前検証CLI「mf-check」を開発し、npmで公開
 
-## Featured Project
+## 主なプロジェクト・貢献
 
-### Restaurant Shift Management System
+### 飲食店向けシフト管理システム
 
-A web-based shift submission and management system built for real restaurant operations.
+9店舗・約130名が所属する飲食店運営組織に向けて設計・開発したWebアプリです。この数字は対象組織の規模であり、アクティブ利用者数ではありません。
 
-Built for an operation spanning **9 stores and approximately 130 staff members**.
+シフト提出、店舗・役割ごとの管理、人員不足の可視化、配置補助を実装。既存の業務で必要なExcel出力にも対応し、店長からのフィードバックをもとに画面や運用を改善しています。
 
-**What I worked on**
-- Employee shift submission workflow
-- Manager-side scheduling and staffing management
-- Required staffing configuration by weekday / holiday
-- Automatic shortage detection
-- Shift assignment assistance based on role and availability
-- Role-based access control and Row Level Security
-- Excel export for existing operational workflows
-- Continuous improvements based on real user feedback
+**技術：** Next.js / TypeScript / Supabase / PostgreSQL / Vercel
 
-**Tech Stack**
+[ポートフォリオ・設計資料](https://github.com/konkonrong-lgtm/shift-management-system-portfolio) · [スタッフ向けデモ](https://demo-shift.vercel.app/s/demo) · [店長向けデモ](https://demo-shift.vercel.app/manager/demo/login)（デモ用パスワード：`1111`）
 
-`Next.js` `TypeScript` `Supabase` `PostgreSQL` `Vercel`
+### Salesforce公式OSS — salesforcedx-vscode
 
----
+Salesforce以外のプロジェクトで `.cls` ファイルを開くと、Apex Language Serverが起動し、不要なファイルが生成される問題を調査しました。
 
-**Links**
+原因を追跡し、Salesforceプロジェクトかどうかを確認する処理と回帰テストを追加。提出した **PR #7973** は、Salesforce側のCI・レビュー用の **PR #7976** に取り込まれ、作者情報を保持したままマージされました。
 
-- Repository: https://github.com/konkonrong-lgtm/shift-management-system-portfolio
-- Staff Demo: https://demo-shift.vercel.app/s/demo
-- Manager Demo: https://demo-shift.vercel.app/manager/demo/login  
-  Password: `1111`
+[提出したPR #7973](https://github.com/forcedotcom/salesforcedx-vscode/pull/7973) · [採用・マージされたPR #7976](https://github.com/forcedotcom/salesforcedx-vscode/pull/7976)
 
----
+### mf-check — Salesforce Multi-Framework事前検証CLI
 
-## Security Research
+「デプロイに成功してもアプリが使える状態にならない」という問題をきっかけに開発しました。
 
-### Salesforce Security Report
+UI Bundleと内部アプリ・Experience Cloudの参照関係、ローカルの権限設定、対象orgのスキーマに対するGraphQL互換性を検査します。外部 `.graphql` ファイルとSalesforce SDKの静的inline `gql` に対応し、誤検知の削減を重視しています。
 
-Reported a security issue to Salesforce Product Security.
+**技術：** TypeScript / Babel AST / GraphQL / Vitest / GitHub Actions  
+npmで公開し、自動テストとCIで継続的に検証しています。
 
-Salesforce confirmed that the reported findings were successfully reproduced and that the Engineering team was working on remediation.
+[ソースコード・使い方](https://github.com/konkonrong-lgtm/mf-check) · [npm](https://www.npmjs.com/package/@konkonrong/mf-check)
 
-Technical details are being withheld pending confirmation that they can be publicly disclosed.
+## その他の取り組み
 
----
+- **セキュリティ報告：** Salesforce Product Securityに問題を報告し、再現できたとの連絡を受けています。技術的な詳細は公開可否が確認できるまで非公開にしています。
+- **開発中：** 飲食店向けの食材・レシピ・原価管理システム。
 
-## Open Source Contributions
+## 使用技術
 
-### Salesforce — salesforcedx-vscode
+- **言語：** TypeScript / JavaScript / Python
+- **Web・データベース：** React / Next.js / Supabase / PostgreSQL
+- **開発・検証：** Git / Salesforce CLI / Vitest / GitHub Actions
 
-Contributed to Salesforce's official VS Code extensions repository.
+<details>
+<summary>English profile</summary>
 
-I investigated an issue where opening a `.cls` file in a non-Salesforce workspace could unintentionally activate the Salesforce Apex extension, start the Apex Language Server, and create `.sfdx/tools` artifacts.
+## About me
 
-**What I did**
-- Reproduced the issue in a non-SFDX workspace
-- Isolated `.cls` file opening as the trigger
-- Traced the behavior from VS Code language association to Apex extension activation
-- Identified Apex Language Server startup as the unwanted side effect
-- Added a Salesforce-project guard using `ProjectService.isSalesforceProject()`
-- Added regression tests for both Salesforce and non-Salesforce workspaces
-- Verified the fix with 12 test suites / 115 tests, linting, and manual validation
+I'm Sunghun Kim, an engineering student at Kwansei Gakuin University in Japan, expecting to graduate in 2028 and pursuing a software engineering career.
 
-My external **PR #7973** was adopted by Salesforce as internal **PR #7976** for their internal CI/review process and merged with my author credit preserved.
+I build web applications for real operational needs and tools for developers. My work includes improving products through user feedback, investigating existing codebases, and writing fixes with regression tests.
 
-- Issue #7886  
-  https://github.com/forcedotcom/salesforcedx-vscode/issues/7886
+### Selected work
 
-- My PR #7973  
-  https://github.com/forcedotcom/salesforcedx-vscode/pull/7973
+**Restaurant Shift Management System**  
+Built a web application for a restaurant organization spanning 9 stores and approximately 130 staff members. These figures describe the organization, not active usage. The system covers shift submission, staffing shortages, assignment assistance, and Excel export, with ongoing improvements based on operational feedback.
 
-- Salesforce adoption / merged PR #7976  
-  https://github.com/forcedotcom/salesforcedx-vscode/pull/7976
+Next.js / TypeScript / Supabase / PostgreSQL / Vercel
 
----
+[Portfolio and design documents](https://github.com/konkonrong-lgtm/shift-management-system-portfolio) · [Staff demo](https://demo-shift.vercel.app/s/demo) · [Manager demo](https://demo-shift.vercel.app/manager/demo/login) (demo password: `1111`)
 
-## Developer Tools
+**Salesforce OSS — salesforcedx-vscode**  
+Investigated unintended Apex Language Server startup outside Salesforce projects, added a project guard, and wrote regression tests. My [PR #7973](https://github.com/forcedotcom/salesforcedx-vscode/pull/7973) was adopted into [PR #7976](https://github.com/forcedotcom/salesforcedx-vscode/pull/7976) and merged with author credit preserved.
 
-### mf-check — Salesforce Multi-Framework Preflight CLI
+**mf-check — Multi-Framework preflight CLI**  
+Created an npm-published CLI to check UI Bundle linkage, local access metadata, and GraphQL compatibility with a target Salesforce org. Supports external `.graphql` files and static inline Salesforce SDK `gql`, with a focus on reducing false positives.
 
-A CLI for detecting configuration, linkage, and GraphQL compatibility issues in Salesforce Multi-Framework projects before deployment.
+TypeScript / Babel AST / GraphQL / Vitest / GitHub Actions
 
-Designed to catch deployment blockers and environment mismatches early, with a current focus on React-based Salesforce Multi-Framework applications.
+[Repository](https://github.com/konkonrong-lgtm/mf-check) · [npm](https://www.npmjs.com/package/@konkonrong/mf-check)
 
-**What it checks**
-- UI Bundle configuration and build output
-- CustomApplication / Experience Cloud → UI Bundle linkage
-- Lightning application configuration
-- Permission Set application visibility
-- GraphQL operations against the target Salesforce org schema
+### Other work
 
-Published as an npm package with automated tests and GitHub Actions CI.
+- Reported a security issue that Salesforce Product Security confirmed it could reproduce. Technical details remain private pending disclosure clearance.
+- Currently building a restaurant ingredient, recipe, and cost management system.
 
-**Tech Stack**
-
-`TypeScript` `GraphQL` `Salesforce CLI` `Vitest` `GitHub Actions`
-
-**Install**
-
-```bash
-npm install -g @konkonrong/mf-check
-```
-
-**Links**
-
-- Repository: https://github.com/konkonrong-lgtm/mf-check
-- npm: https://www.npmjs.com/package/@konkonrong/mf-check
-
----
-
-## Currently Building
-
-### Restaurant Cost & Recipe Management System
-
-Building a system for managing restaurant ingredients, recipes, and food costs.
-
-Current focus:
-- Ingredient management
-- Recipe composition
-- Automatic recipe cost calculation
-- Food cost ratio analysis
-- Architecture designed for future inventory, POS, and sales-analysis features
-
-**Tech Stack**
-
-`Next.js` `TypeScript` `Supabase` `PostgreSQL`
-
----
-
-## Tech
-
-**Languages**  
-`TypeScript` `JavaScript` `Python`
-
-**Web / Backend**  
-`Next.js` `React` `Supabase` `PostgreSQL`
-
-**Tools / Platforms**  
-`Git` `GitHub` `VS Code` `Salesforce CLI`
-
----
-
-## Interests
-
-- Software Engineering
-- Product Development
-- Developer Tools
-- Open Source
-- Automation
+</details>
