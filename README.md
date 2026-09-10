@@ -56,6 +56,8 @@ npmで公開し、自動テストとCIで継続的に検証しています。
 
 [ソースコード・使い方](https://github.com/konkonrong-lgtm/mf-check) · [npm](https://www.npmjs.com/package/@konkonrong/mf-check)
 
+**登壇：** 2026年9月10日、[Salesforce Developers Meetup #35](https://trailblazercommunitygroups.com/events/details/salesforce-salesforce-developer-group-tokyo-japan-presents-ohurainkai-cui-salesforce-developers-meetup-35/)（東京）でmf-checkについて日本語でLT発表。開発背景、診断範囲、Experience Cloud構成での誤検出を改善した事例を紹介しました。
+
 ## その他の取り組み
 
 - **開発中：** 飲食店向けの食材・レシピ・原価管理システム。
@@ -96,6 +98,8 @@ Created an npm-published CLI to check UI Bundle linkage, local access metadata, 
 TypeScript / Babel AST / GraphQL / Vitest / GitHub Actions
 
 [Repository](https://github.com/konkonrong-lgtm/mf-check) · [npm](https://www.npmjs.com/package/@konkonrong/mf-check)
+
+**Talk:** Presented mf-check in Japanese at [Salesforce Developers Meetup #35](https://trailblazercommunitygroups.com/events/details/salesforce-salesforce-developer-group-tokyo-japan-presents-ohurainkai-cui-salesforce-developers-meetup-35/) in Tokyo on September 10, 2026, covering its motivation, validation scope, and an improvement addressing false positives in Experience Cloud projects.
 
 ### Other work
 
