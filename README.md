@@ -22,9 +22,9 @@
 
 ### Salesforceへのセキュリティ報告
 
-Salesforceにセキュリティ上の問題を非公開で報告。PVRチームによる再現確認と有効性の認定を受け、修正に向けて開発チームへ引き継がれました。
+Salesforceにパストラバーサル（Path Traversal）の問題を非公開で報告。PVRチームによる再現確認と有効性の認定を受け、修正に向けて開発チームへ引き継がれました。
 
-Privately reported a security issue to Salesforce. The Product Vulnerability Response (PVR) team reproduced the issue, accepted it as a valid security finding, and referred it to Engineering for remediation.
+Privately reported a path traversal issue to Salesforce. The Product Vulnerability Response (PVR) team reproduced the issue, accepted it as a valid security finding, and referred it to Engineering for remediation.
 
 ### Salesforce公式OSS — salesforcedx-vscode
 
@@ -96,7 +96,7 @@ Next.js / TypeScript / Supabase / PostgreSQL / Vercel
 
 **Salesforce Security Reporting**
 
-Privately reported a security issue to Salesforce. The Product Vulnerability Response (PVR) team reproduced the issue, accepted it as a valid security finding, and referred it to Engineering for remediation.
+Privately reported a path traversal issue to Salesforce. The Product Vulnerability Response (PVR) team reproduced the issue, accepted it as a valid security finding, and referred it to Engineering for remediation.
 
 **Salesforce OSS — salesforcedx-vscode**
 
