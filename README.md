@@ -20,6 +20,10 @@
 
 [ポートフォリオ・設計資料](https://github.com/konkonrong-lgtm/shift-management-system-portfolio) · [スタッフ向けデモ](https://demo-shift.vercel.app/s/demo) · [店長向けデモ](https://demo-shift.vercel.app/manager/demo/login)（デモ用パスワード：`1111`）
 
+### Salesforceへのセキュリティ報告
+
+Privately reported a security issue to Salesforce. The Product Vulnerability Response (PVR) team reproduced the issue, accepted it as a valid security finding, and referred it to Engineering for remediation.
+
 ### Salesforce公式OSS — salesforcedx-vscode
 
 Apex Language Serverの不要な起動やorg切り替え時の状態競合を調査し、修正・回帰テストの提出と問題報告に取り組みました。
@@ -87,6 +91,10 @@ Built a web application for a restaurant organization spanning 9 stores and appr
 Next.js / TypeScript / Supabase / PostgreSQL / Vercel
 
 [Portfolio and design documents](https://github.com/konkonrong-lgtm/shift-management-system-portfolio) · [Staff demo](https://demo-shift.vercel.app/s/demo) · [Manager demo](https://demo-shift.vercel.app/manager/demo/login) (demo password: `1111`)
+
+**Salesforce Security Reporting**
+
+Privately reported a security issue to Salesforce. The Product Vulnerability Response (PVR) team reproduced the issue, accepted it as a valid security finding, and referred it to Engineering for remediation.
 
 **Salesforce OSS — salesforcedx-vscode**
 
