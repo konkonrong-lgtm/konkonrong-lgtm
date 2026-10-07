@@ -18,13 +18,13 @@
 
 **技術：** Next.js / TypeScript / Supabase / PostgreSQL / Vercel
 
-[ポートフォリオ・設計資料](https://github.com/konkonrong-lgtm/shift-management-system-portfolio) · [スタッフ向けデモ](https://demo-shift.vercel.app/s/demo) · [店長向けデモ](https://demo-shift.vercel.app/manager/demo/login)（デモ用パスワード：`1111`）
+[ポートフォリオ・設計資料](https://github.com/konkonrong-lgtm/shift-management-system-portfolio) · [スタッフ向けデモ](https://demo-shift.vercel.app/s/demo) · [店長向けデモ](https://demo-shift.vercel.app/manager/demo/login)
 
 ### Salesforceへのセキュリティ報告
 
-Salesforceにパストラバーサル（Path Traversal）の問題を非公開で報告。PVRチームによる再現確認と有効性の認定を受け、修正に向けて開発チームへ引き継がれました。
+Salesforceに複数のセキュリティ問題を非公開で報告し、パストラバーサル（Path Traversal）とOSコマンドインジェクション（OS Command Injection）の2件がSalesforce Product Vulnerability Response (PVR) によりValid Security Findingとして確認されました。技術的な詳細や再現手順は非公開としています。
 
-Privately reported a path traversal issue to Salesforce. The Product Vulnerability Response (PVR) team reproduced the issue, accepted it as a valid security finding, and referred it to Engineering for remediation.
+Privately reported multiple security issues to Salesforce. Two findings—a path traversal issue and an OS command injection issue—were confirmed by Salesforce Product Vulnerability Response (PVR) as valid security findings. Technical details and reproduction steps remain private.
 
 ### Salesforce公式OSS — salesforcedx-vscode
 
@@ -92,11 +92,11 @@ Built a web application for a restaurant organization spanning 9 stores and appr
 
 Next.js / TypeScript / Supabase / PostgreSQL / Vercel
 
-[Portfolio and design documents](https://github.com/konkonrong-lgtm/shift-management-system-portfolio) · [Staff demo](https://demo-shift.vercel.app/s/demo) · [Manager demo](https://demo-shift.vercel.app/manager/demo/login) (demo password: `1111`)
+[Portfolio and design documents](https://github.com/konkonrong-lgtm/shift-management-system-portfolio) · [Staff demo](https://demo-shift.vercel.app/s/demo) · [Manager demo](https://demo-shift.vercel.app/manager/demo/login)
 
 **Salesforce Security Reporting**
 
-Privately reported a path traversal issue to Salesforce. The Product Vulnerability Response (PVR) team reproduced the issue, accepted it as a valid security finding, and referred it to Engineering for remediation.
+Privately reported multiple security issues to Salesforce. Two findings—a path traversal issue and an OS command injection issue—were confirmed by Salesforce Product Vulnerability Response (PVR) as valid security findings. Technical details and reproduction steps remain private.
 
 **Salesforce OSS — salesforcedx-vscode**
 
