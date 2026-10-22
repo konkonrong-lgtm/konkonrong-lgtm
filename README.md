@@ -22,9 +22,9 @@
 
 ### Salesforceへのセキュリティ報告
 
-Salesforceに複数のセキュリティ問題を非公開で報告し、パストラバーサル（Path Traversal）とOSコマンドインジェクション（OS Command Injection）の2件がSalesforce Product Vulnerability Response (PVR) によりValid Security Findingとして確認されました。技術的な詳細や再現手順は非公開としています。
+Salesforceに複数のセキュリティ問題を非公開で報告し、**3件**がSalesforce Product Vulnerability Response (PVR) により**Valid Security Finding**として確認されました。うち2件はパストラバーサル（Path Traversal）とOSコマンドインジェクション（OS Command Injection）です。残る1件の問題種別は公開せず、影響コンポーネント・バージョン、技術的詳細、再現手順、個別の修正PRとの関連も非公開としています。
 
-Privately reported multiple security issues to Salesforce. Two findings—a path traversal issue and an OS command injection issue—were confirmed by Salesforce Product Vulnerability Response (PVR) as valid security findings. Technical details and reproduction steps remain private.
+Privately reported multiple security issues to Salesforce. **Three findings** were confirmed by Salesforce Product Vulnerability Response (PVR) as **valid security findings**. Two can be described at a high level as path traversal and OS command injection; the third is described only in general terms. Affected components, versions, technical details, reproduction steps, and links between individual findings and specific remediation PRs remain undisclosed.
 
 ### Salesforce公式OSS — salesforcedx-vscode
 
@@ -96,7 +96,7 @@ Next.js / TypeScript / Supabase / PostgreSQL / Vercel
 
 **Salesforce Security Reporting**
 
-Privately reported multiple security issues to Salesforce. Two findings—a path traversal issue and an OS command injection issue—were confirmed by Salesforce Product Vulnerability Response (PVR) as valid security findings. Technical details and reproduction steps remain private.
+Privately reported multiple security issues to Salesforce. **Three findings** were confirmed by Salesforce Product Vulnerability Response (PVR) as **valid security findings**. Two can be described at a high level as path traversal and OS command injection; the third is described only in general terms. Affected components, versions, technical details, reproduction steps, and links between individual findings and specific remediation PRs remain undisclosed.
 
 **Salesforce OSS — salesforcedx-vscode**
 
